@@ -1,4 +1,4 @@
-from keras.layers.core import Dense, SpatialDropout1D
+﻿from keras.layers.core import Dense, SpatialDropout1D
 from keras.models import Sequential
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
@@ -22,7 +22,6 @@ BATCH_SIZE = 32
 NUM_EPOCHS = 10
 
 tokenizer = Tokenizer()
-
 
 def fit(requests, category_ids):  # messages - LIST!!! предложений, category_ids - LIST!!! категорий
     sentences = np.array([tokenize(request) for request in requests])
