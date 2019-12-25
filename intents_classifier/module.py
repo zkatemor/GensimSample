@@ -29,7 +29,6 @@ def fit(requests: typing.List[str], category_ids: typing.List[str]) -> keras.cal
     requests, category_ids = sklearn.utils.shuffle(requests, category_ids)  # перемешиваем данные
 
     sentences = numpy.array([__tokenize(request) for request in requests])  # предобработка
-    print(sentences)
     counter, maxlen = __get_counter_and_maxlen(sentences)
     vocab_sz = len(counter) + 1  # кол-во различных слов в sentences
     embedding_weights = __get_embedding_weights(counter, vocab_sz)
